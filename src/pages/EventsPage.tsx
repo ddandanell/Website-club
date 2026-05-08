@@ -66,7 +66,7 @@ const pastEvents = [
   { title: 'Ubud Wellness Retreat', date: 'March 2026', location: 'Bali' },
   { title: 'Bangkok Culinary Tour', date: 'February 2026', location: 'Bangkok' },
   { title: 'Ski Weekend Niseko', date: 'January 2026', location: 'Japan' },
-  { title: 'New Year Gala Bali', date: 'December 2025', location: 'Bali' },
+  { title: 'New Year Gala Bali', date: 'December 2026', location: 'Bali' },
 ];
 
 export default function EventsPage() {

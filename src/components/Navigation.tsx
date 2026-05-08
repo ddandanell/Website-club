@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Mail } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,10 +10,7 @@ const navItems = [
   { label: 'The Club', href: '/#concept' },
   { label: 'Membership', href: '/#membership' },
   { label: 'Partners', href: '/partners' },
-  { label: 'Events', href: '/events' },
   { label: 'About', href: '/about' },
-  { label: 'Concierge', href: '/concierge' },
-  { label: 'Support', href: '/support' },
 ];
 
 export function Navigation() {
@@ -68,10 +65,17 @@ export function Navigation() {
           <a
             href="/"
             onClick={(e) => { e.preventDefault(); navigate('/'); }}
-            className="font-display text-xl font-bold text-[#C8A97E] tracking-[0.1em] hover:text-[#D4B88E] transition-colors duration-300"
+            className="flex items-center gap-3 group"
             data-hover="true"
           >
-            PMLC
+            <img
+              src="/logo-icon.png"
+              alt=""
+              className="w-8 h-8 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+            />
+            <span className="font-display text-xl font-bold text-[#C8A97E] tracking-[0.1em] group-hover:text-[#D4B88E] transition-colors duration-300">
+              PMLC
+            </span>
           </a>
 
           <div className="hidden xl:flex items-center gap-8">
@@ -96,7 +100,7 @@ export function Navigation() {
               className="text-[12px] font-medium text-[#9A9590] hover:text-[#C8A97E] transition-colors duration-300 tracking-[0.08em] uppercase flex items-center gap-1.5"
               data-hover="true"
             >
-              <Phone className="w-3 h-3" /> 24/7
+              <Mail className="w-3 h-3" /> Contact
             </a>
             <a
               href="/login"

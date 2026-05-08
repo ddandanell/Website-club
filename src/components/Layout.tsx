@@ -6,7 +6,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Navigation } from './Navigation';
 import { CustomCursor } from './CustomCursor';
 import { ParticleField } from './ParticleField';
-import { WhatsAppButton } from './WhatsAppButton';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +41,6 @@ export default function Layout() {
       <main>
         <Outlet />
       </main>
-      <WhatsAppButton />
     </div>
   );
 }

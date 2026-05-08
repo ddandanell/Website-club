@@ -392,7 +392,7 @@ export const ctaConfig: CTAConfig = {
   headline: "Ready to move differently?",
   body: "Membership is application-based. We review every application to protect the quality of our network.",
   ctaPrimary: "Apply for Membership",
-  ctaSecondary: "Contact via WhatsApp",
+  ctaSecondary: "Contact via Email",
   trustNote: "Application review within 48 hours. No obligation.",
 };
 
@@ -406,7 +406,6 @@ export interface FooterConfig {
   membershipLinks: NavItem[];
   destinationLinks: NavItem[];
   contact: {
-    whatsapp: string;
     email: string;
   };
   copyright: string;
@@ -431,19 +430,17 @@ export const footerConfig: FooterConfig = {
     { label: "Vietnam", href: "#destinations" },
   ],
   contact: {
-    whatsapp: "+1 (555) 000-0000",
     email: "membership@pmlc.com",
   },
-  copyright: "\u00A9 2025 Private Members Lifestyle Club. All rights reserved.",
+  copyright: "\u00A9 2026 Private Members Lifestyle Club. All rights reserved.",
   badge: "Application-only membership",
 };
 
 // ============================================================================
-// WhatsApp CTA
+// Contact — Email only policy
 // ============================================================================
 
-export const whatsappConfig = {
-  number: "+15550000000",
-  message: "I would like to learn more about Private Members Lifestyle Club membership.",
-  label: "Contact on WhatsApp",
+export const contactConfig = {
+  email: "membership@pmlc.com",
+  label: "Contact",
 };

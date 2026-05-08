@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ctaConfig, whatsappConfig } from '../config';
+import { ctaConfig } from '../config';
+import { useNavigate } from 'react-router';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,6 +10,7 @@ export function CTA() {
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -55,14 +57,11 @@ export function CTA() {
   }, []);
 
   const handlePrimaryCta = () => {
-    // Open WhatsApp with application message
-    const url = `https://wa.me/${whatsappConfig.number.replace(/\+/g, '')}?text=${encodeURIComponent('I would like to apply for Private Members Lifestyle Club membership.')}`;
-    window.open(url, '_blank');
+    navigate('/apply');
   };
 
   const handleSecondaryCta = () => {
-    const url = `https://wa.me/${whatsappConfig.number.replace(/\+/g, '')}?text=${encodeURIComponent(whatsappConfig.message)}`;
-    window.open(url, '_blank');
+    window.location.href = 'mailto:membership@pmlc.com?subject=Membership%20Inquiry';
   };
 
   const headlineWords = ctaConfig.headline.split(' ');
